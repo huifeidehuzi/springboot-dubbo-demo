@@ -14,7 +14,7 @@ import java.util.List;
  * @author zhangjianfeng 2019/12/16
  */
 @Component
-@Service(version = "1.0.0")
+//@Service(version = "1.0.0")
 public class UserServiceImpl implements UserService {
 
     @Override

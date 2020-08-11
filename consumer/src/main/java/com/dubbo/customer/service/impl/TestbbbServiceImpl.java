@@ -5,11 +5,12 @@ import com.dubbo.customer.Testaaaa;
 import com.dubbo.customer.service.TestService;
 import com.dubbo.customer.service.TestServiceA;
 
-@Activate(group = "groupab",value = "name")
-public class TestaaaaServiceImpl implements TestServiceA {
+
+@Activate(group = "groupa")
+public class TestbbbServiceImpl implements TestServiceA {
     @Override
     public void printInfo(Testaaaa testaaaa) {
-        System.out.println("TestaaaaServiceImpl");
+        System.out.println("TestbbbbServiceImpl");
     }
 
     @Override

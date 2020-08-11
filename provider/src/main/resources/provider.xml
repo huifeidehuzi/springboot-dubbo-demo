@@ -1,0 +1,13 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+
+    <dubbo:service interface="com.dubbo.api.service.UserService" ref="userService" id="aaaaa"/>
+    <bean id="userService" class="com.dubbo.producer.service.impl.UserServiceImpl"/>
+    <dubbo:application name="provider_1"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <dubbo:protocol prompt="20890"/>
+</beans>
