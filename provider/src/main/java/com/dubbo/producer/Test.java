@@ -1,19 +1,15 @@
-package com.dubbo.customer;
+package com.dubbo.producer;
 
 import com.alibaba.dubbo.common.URL;
 import com.alibaba.dubbo.common.extension.ExtensionLoader;
 import com.alibaba.dubbo.rpc.ExporterListener;
-import com.alibaba.dubbo.rpc.Protocol;
-import com.dubbo.customer.service.TestService;
-import com.dubbo.customer.service.TestServiceA;
 
 import java.util.List;
-import java.util.ServiceLoader;
 
 public class Test {
 
     public static void main(String[] args) {
-        URL url = URL.valueOf("test://localhost/test?name=exporter.listener");
+        URL url = URL.valueOf("test://localhost/test?name=listener");
        /* TestService testService = ExtensionLoader.getExtensionLoader(TestService.class).getExtension("impla");
         Testaaaa a = new Testaaaa();
         a.setUrl(url);

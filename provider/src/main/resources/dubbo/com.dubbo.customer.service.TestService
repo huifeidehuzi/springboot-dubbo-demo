@@ -1,0 +1,3 @@
+impl=com.dubbo.customer.service.impl.TestServiceImpl
+impla=com.dubbo.customer.service.impl.TestaServiceImpl
+implaaa=com.dubbo.customer.service.impl.TestaaaaServiceImpl

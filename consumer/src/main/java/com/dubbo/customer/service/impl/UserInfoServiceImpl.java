@@ -18,7 +18,7 @@ import java.util.List;
 @Service
 public class UserInfoServiceImpl implements UserInfoService {
 
-    //@Reference(version = "1.0.0")
+    @Reference(version = "1.0.0")
     @Resource
     private UserService userService;
 

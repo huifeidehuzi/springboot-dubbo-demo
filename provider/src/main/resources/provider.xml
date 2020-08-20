@@ -5,7 +5,9 @@
        http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
 
-    <dubbo:service interface="com.dubbo.api.service.UserService" ref="userService" id="aaaaa"/>
+    <dubbo:service interface="com.dubbo.api.service.UserService" ref="userService" id="aaaaa" dynamic="true" proxy="jdk">
+        <property name="exporter.listener" value="listener"/>
+    </dubbo:service>
     <bean id="userService" class="com.dubbo.producer.service.impl.UserServiceImpl"/>
     <dubbo:application name="provider_1"/>
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>

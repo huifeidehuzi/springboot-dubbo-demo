@@ -1,0 +1,1 @@
+listener=com.dubbo.customer.listener.MyListener
