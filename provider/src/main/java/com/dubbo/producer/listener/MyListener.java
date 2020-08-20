@@ -14,6 +14,6 @@ public class MyListener implements ExporterListener {
     }
     @Override
     public void unexported(Exporter<?> exporter) {
-        System.out.println("服务没有暴露完成调用"+exporter.getInvoker().getInterface().getName());
+        System.out.println("销毁完成调用"+exporter.getInvoker().getInterface().getName());
     }
 }
