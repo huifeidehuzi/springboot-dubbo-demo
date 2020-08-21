@@ -7,6 +7,7 @@
 
     <dubbo:service interface="com.dubbo.api.service.UserService" ref="userService" id="aaaaa" dynamic="true" proxy="jdk">
         <property name="exporter.listener" value="listener"/>
+        <property name="service.filter" value="filterTest"/>
     </dubbo:service>
     <bean id="userService" class="com.dubbo.producer.service.impl.UserServiceImpl"/>
     <dubbo:application name="provider_1"/>
