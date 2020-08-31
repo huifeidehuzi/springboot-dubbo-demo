@@ -1,6 +1,5 @@
 package com.dubbo.producer.service.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.dubbo.api.entity.User;
 import com.dubbo.api.service.UserService;
 import org.springframework.stereotype.Component;

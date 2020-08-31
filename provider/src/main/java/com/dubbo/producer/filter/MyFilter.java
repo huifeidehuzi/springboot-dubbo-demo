@@ -11,6 +11,6 @@ public class MyFilter implements Filter {
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
         System.out.println(invoker.getInterface().getName() + "=========filter");
 
-        return null;
+        return invoker.invoke(invocation);
     }
 }
