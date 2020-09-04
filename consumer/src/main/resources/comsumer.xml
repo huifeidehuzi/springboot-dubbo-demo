@@ -5,7 +5,7 @@
        http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
 
-    <dubbo:reference interface="com.dubbo.api.service.UserService" id="userService" scope="remote"/>
+    <dubbo:reference interface="com.dubbo.api.service.UserService" id="userService" scope="remote" loadbalance="myLoadBalance"/>
     <dubbo:application name="comsumer_1"/>
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 </beans>

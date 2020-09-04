@@ -1,0 +1,1 @@
+myLoadBalance=com.dubbo.customer.loadbalance.MyLoadBalance
