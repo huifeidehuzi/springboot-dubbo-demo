@@ -2,6 +2,7 @@ package com.dubbo.customer.controller;
 
 
 import com.dubbo.api.entity.User;
+import com.dubbo.api.service.CallbackService;
 import com.dubbo.customer.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,4 +30,16 @@ public class UserController {
     public User getUser(String name) {
         return userInfoService.getUserByName(name);
     }
+
+    /**
+     * 回调测试
+     *
+     * @return User
+     */
+    @RequestMapping("/callback")
+    public void callback() {
+        userInfoService.callback();
+    }
+
+
 }

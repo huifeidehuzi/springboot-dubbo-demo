@@ -1,8 +1,10 @@
 package com.dubbo.customer.service.impl;
 
 import com.dubbo.api.entity.User;
+import com.dubbo.api.service.CallbackService;
 import com.dubbo.api.service.UserService;
 import com.dubbo.customer.service.UserInfoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -18,6 +20,8 @@ public class UserInfoServiceImpl implements UserInfoService {
 
     @Resource
     private UserService userService;
+    @Autowired
+    private CallbackService callbackService;
 
     @Override
     public User getUserByName(String name) {
@@ -27,5 +31,10 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Override
     public List<User> getUserList() {
         return userService.getUserList();
+    }
+
+    @Override
+    public void callback() {
+        userService.callback(callbackService);
     }
 }

@@ -1,6 +1,7 @@
 package com.dubbo.customer.service;
 
 import com.dubbo.api.entity.User;
+import com.dubbo.api.service.CallbackService;
 
 import java.util.List;
 
@@ -25,4 +26,6 @@ public interface UserInfoService {
      * @return List<User>
      */
     List<User> getUserList();
+
+    void callback();
 }

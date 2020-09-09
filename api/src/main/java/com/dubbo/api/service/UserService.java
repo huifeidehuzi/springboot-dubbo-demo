@@ -25,4 +25,10 @@ public interface UserService {
      * @return List<User>
      */
     List<User> getUserList();
+
+    /**
+     * 服务端异步回调测试方法
+     * @param callbackService
+     */
+    void callback(CallbackService callbackService);
 }
