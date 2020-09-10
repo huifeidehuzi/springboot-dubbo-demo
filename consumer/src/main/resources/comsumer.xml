@@ -6,6 +6,8 @@
 
 
     <dubbo:reference interface="com.dubbo.api.service.UserService" id="userService" scope="remote" loadbalance="consistenthash"/>
+    <dubbo:reference interface="com.dubbo.producer.service.GenericTestService" id="genericTestService" generic="true"/>
+
     <dubbo:application name="comsumer_1"/>
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 </beans>

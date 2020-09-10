@@ -1,9 +1,11 @@
 package com.dubbo.customer.service.impl;
 
+import com.alibaba.dubbo.rpc.service.GenericService;
 import com.dubbo.api.entity.User;
 import com.dubbo.api.service.CallbackService;
 import com.dubbo.api.service.UserService;
 import com.dubbo.customer.service.UserInfoService;
+import com.dubbo.customer.util.SpringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,5 +38,11 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Override
     public void callback() {
         userService.callback(callbackService);
+    }
+
+    @Override
+    public void genericServiceTest(String body) {
+        GenericService GenericService = (GenericService) SpringUtils.getBean("genericTestService");
+        GenericService.$invoke("printInfo", new String[]{"java.lang.String"}, new String[]{body});
     }
 }

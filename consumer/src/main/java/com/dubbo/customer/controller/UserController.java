@@ -41,5 +41,16 @@ public class UserController {
         userInfoService.callback();
     }
 
+    /**
+     * 回调测试
+     *
+     * @return User
+     */
+    @RequestMapping("/genericTest")
+    public void genericTest(String body) {
+        userInfoService.genericServiceTest(body);
+    }
+
+
 
 }

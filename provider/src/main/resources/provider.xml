@@ -12,7 +12,10 @@
             <dubbo:argument index="0" callback="true"/>
         </dubbo:method>
     </dubbo:service>
+
+    <dubbo:service interface="com.dubbo.producer.service.GenericTestService" ref="genericTestService"/>
     <bean id="userService" class="com.dubbo.producer.service.impl.UserServiceImpl"/>
+    <bean id="genericTestService" class="com.dubbo.producer.service.impl.GenericTestServiceImpl"/>
     <dubbo:application name="provider_1"/>
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
     <dubbo:protocol name="dubbo" port="20882"/>

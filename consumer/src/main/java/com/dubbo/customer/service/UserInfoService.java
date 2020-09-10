@@ -28,4 +28,6 @@ public interface UserInfoService {
     List<User> getUserList();
 
     void callback();
+
+    void genericServiceTest(String body);
 }
